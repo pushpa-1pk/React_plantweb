@@ -1,8 +1,14 @@
+import aglaonema from "../assets/images/hello.png";
+import aloeVera from "../assets/images/Alov vera.png";
+import agavePlant from "../assets/images/AgavePlant.png";
+import plantainLilies from "../assets/images/Plantainliliess.png";
+import snakePlant from "../assets/images/snakeplant.png";
+
 export const O2plants = [
   {
     id: 1,
     name: "Aglaonema",
-    img:"src/assets/images/hello.png",
+    img: aglaonema,
     short: "Low-maintenance oxygen-boosting decorative plant.",
     description:
       "Aglaonema is a leafy indoor plant known for improving air quality by releasing oxygen and filtering toxins, even in low-light environments.",
@@ -11,12 +17,11 @@ export const O2plants = [
       "Filters chemicals like formaldehyde",
       "Very easy to care for and grows in shade",
     ],
-    
   },
   {
     id: 2,
     name: "Aloe Vera",
-    img: "src/assets/images/Alov vera.png",
+    img: aloeVera,
     short: "Medicinal plant with high nighttime oxygen release.",
     description:
       "Aloe Vera is known for its air-purifying properties and healing gel. It increases oxygen levels at night, making it ideal for bedrooms.",
@@ -29,7 +34,7 @@ export const O2plants = [
   {
     id: 3,
     name: "Agave Plant",
-    img: "src/assets/images/AgavePlant.png",
+    img: agavePlant,
     short: "Large indoor palm that purifies and humidifies air.",
     description:
       "Agave plant releases a high amount of oxygen during the day while also increasing indoor humidity, making the air healthier to breathe.",
@@ -42,7 +47,7 @@ export const O2plants = [
   {
     id: 4,
     name: "Plantain Lilies",
-    img:"src/assets/images/Plantainliliess.png",
+    img: plantainLilies,
     short: "Graceful flowering plant with strong air-cleaning power.",
     description:
       "Plantain Lilies filters toxic gases and improves indoor air quality, making it a perfect decorative and health-boosting indoor plant.",
@@ -55,7 +60,7 @@ export const O2plants = [
   {
     id: 5,
     name: "Snake Plant",
-    img: "src/assets/images/snakeplant.png",
+    img: snakePlant,
     short: "Strong oxygen-releasing plant, ideal for bedrooms.",
     description:
       "Snake Plant is one of the top oxygen-producing indoor plants. It continues to convert CO₂ into oxygen even at night, improving sleep quality.",
@@ -64,6 +69,5 @@ export const O2plants = [
       "Removes toxins like benzene and xylene",
       "Very low maintenance and survives in low light",
     ],
-   
   },
 ];

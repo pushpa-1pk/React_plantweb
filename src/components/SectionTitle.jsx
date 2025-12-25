@@ -1,28 +1,30 @@
 import React from 'react'
+import vectorLeft from "../assets/images/VectorL.png";
+import vectorRight from "../assets/images/VectorR.png";
 
-const SectionTitle = ({title}) => {
+const SectionTitle = ({ title }) => {
   return (
-    
-    <div className="flex items-center justify-center mt-20  ">
-  {/* Left vector */}
-  <img
-    src="src/assets/images/VectorL.png"
-    className=" -m-10 "
-  />
+    <div className="flex items-center justify-center mt-20">
+      {/* Left vector */}
+      <img
+        src={vectorLeft}
+        className="-m-10"
+        alt="left vector"
+      />
 
-  {/* Text */}
-  <h2 className="text-white font-semibold text-3xl md:text-6xl ">
-    {title}
-  </h2>
+      {/* Text */}
+      <h2 className="text-white font-semibold text-3xl md:text-6xl">
+        {title}
+      </h2>
 
-  {/* Right vector */}
-  <img
-    src="src/assets/images/VectorR.png"
-    className=" -m-11"
-  />
-</div>
+      {/* Right vector */}
+      <img
+        src={vectorRight}
+        className="-m-11"
+        alt="right vector"
+      />
+    </div>
+  );
+};
 
-  )
-}
-
-export default SectionTitle
+export default SectionTitle;

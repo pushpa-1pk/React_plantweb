@@ -1,5 +1,12 @@
 import React, { useState } from 'react';
 
+// IMAGES (correct imports)
+import logo from "../assets/images/logo_plant.png";
+import arrow from "../assets/Icons/dropdownArrow.svg";
+import searchIcon from "../assets/Icons/search.svg";
+import bagIcon from "../assets/Icons/bag.svg";
+import menuIcon from "../assets/Icons/menu.svg";
+
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileDropdown, setMobileDropdown] = useState(false);
@@ -14,11 +21,11 @@ const Navbar = () => {
         {/* LOGO */}
         <div className="flex items-center">
           <img 
-            src="./src/assets/images/logo_plant.png" 
+            src={logo}
             alt="logo" 
             className="w-15 h-15 object-contain"
           />
-          <p className="font-extrabold text-white text-xl md:text-3xl ">FloraVision.</p>
+          <p className="font-extrabold text-white text-xl md:text-3xl">FloraVision.</p>
         </div>
 
         {/* DESKTOP MENU */}
@@ -26,20 +33,20 @@ const Navbar = () => {
           <ul className="flex gap-15 text-white font-medium text-2xl font-Indie">
             <li className="cursor-pointer hover:text-gray-300"><a href="#home">Home</a></li>
 
-            {/* HOVER ON DESKTOP + CLICK ON MOBILE LOGIC */}
+            {/* Dropdown */}
             <li
               className="cursor-pointer hover:text-gray-200 flex items-center gap-3 relative group"
-              onClick={handleMobileClick} // mobile click
+              onClick={handleMobileClick}
             >
               <a href="#plants">Plants Type</a>
-              <img src="./src/assets/Icons/dropdownArrow.svg" className="w-3 h-3 mt-1" />
+              <img src={arrow} className="w-3 h-3 mt-1" alt="dropdown" />
 
-              {/* DESKTOP (hover) */}
+              {/* Hover Dropdown (desktop) */}
               <ul className="absolute hidden group-hover:block bg-white/10 backdrop-blur-lg mt-50 w-46 shadow-lg rounded-2xl transition-all duration-300 ease-in-out">
-                <li className="block px-4 py-1 hover:bg-white/20">Indoor Plants</li>
-                <li className="block px-4 py-1 hover:bg-white/20">Desk Plants</li>
-                <li className="block px-4 py-1 hover:bg-white/20">Balcony Plants</li>
-                <li className="block px-4 py-1 hover:bg-white/20">Kitchen Plants</li>
+                <li className="block px-4 py-1 hover:bg-white/20 cursor-pointer">Indoor Plants</li>
+                <li className="block px-4 py-1 hover:bg-white/20 cursor-pointer">Desk Plants</li>
+                <li className="block px-4 py-1 hover:bg-white/20 cursor-pointer">Balcony Plants</li>
+                <li className="block px-4 py-1 hover:bg-white/20 cursor-pointer">Kitchen Plants</li>
               </ul>
             </li>
 
@@ -50,27 +57,28 @@ const Navbar = () => {
 
         {/* DESKTOP ICONS */}
         <div className="hidden md:flex items-center gap-14">
-          <img src="./src/assets/Icons/search.svg" className="w-6 cursor-pointer" />
-          <img src="./src/assets/Icons/bag.svg" className="w-6 cursor-pointer" />
-          <img src="./src/assets/Icons/menu.svg" className="w-6 cursor-pointer" />
+          <img src={searchIcon} className="w-6 cursor-pointer" alt="search" />
+          <img src={bagIcon} className="w-6 cursor-pointer" alt="bag" />
+          <img src={menuIcon} className="w-6 cursor-pointer" alt="menu" />
         </div>
 
         {/* MOBILE MENU ICON */}
-        <div className="md:hidden cursor-pointer" onClick={() => {
-          setMobileOpen(!mobileOpen);
-          setMobileDropdown(false); // reset dropdown when opening menu
-        }}>
-          <img src="./src/assets/Icons/menu.svg" className="w-7" />
+        <div
+          className="md:hidden cursor-pointer"
+          onClick={() => {
+            setMobileOpen(!mobileOpen);
+            setMobileDropdown(false);
+          }}
+        >
+          <img src={menuIcon} className="w-7" alt="menu" />
         </div>
       </div>
 
       {/* MOBILE DROPDOWN MAIN */}
       {mobileOpen && (
         <div className="md:hidden px-12 pb-5 text-white font-Indie text-xl space-y-5 bg-black/30 backdrop-blur-sm">
-
           <a href="#home" onClick={() => setMobileOpen(false)} className="block">Home</a>
 
-          {/* CLICK DROPDOWN LINK (MOBILE) */}
           <p className="cursor-pointer" onClick={handleMobileClick}>Plants Type ▼</p>
 
           {mobileDropdown && (
@@ -86,8 +94,8 @@ const Navbar = () => {
           <a href="#contact" onClick={() => setMobileOpen(false)} className="block">Contact</a>
 
           <div className="flex gap-8 pt-4">
-            <img src="./src/assets/Icons/search.svg" className="w-6" />
-            <img src="./src/assets/Icons/bag.svg" className="w-6" />
+            <img src={searchIcon} className="w-6" alt="search" />
+            <img src={bagIcon} className="w-6" alt="bag" />
           </div>
         </div>
       )}

@@ -1,6 +1,7 @@
 import React from 'react'
 import { ChevronRight , Ellipsis } from 'lucide-react';
 import Button from './Button';
+import plant from "../assets/images/AglaonemaPlant.png";
 
 const Buycard = () => {
   return (
@@ -8,7 +9,7 @@ const Buycard = () => {
 
   <div className="absolute inset-x-0 -top-16 md:-top-50 flex justify-center">
     <img
-      src="./src/assets/images/AglaonemaPlant.png"
+      src={plant}
       alt="Aglaonema Plant"
       className="w-40 md:w-lg object-contain"
     />
