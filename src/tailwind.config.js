@@ -15,7 +15,7 @@ export default {
     // margin, padding
     'md:-mt-36', '-mt-36', 'mt-56', 'md:mt-56',
 
-    // radius
+
     'rounded-[80px]', 'rounded-4xl',
 
     // position
