@@ -27,7 +27,7 @@ const Best02 = () => {
           <SwiperSlide key={plant.id}>
             
             {/* CARD */}
-            <div className="relative w-full md:h-[650px] flex flex-col md:flex-row items-center md:gap-60 text-white  bg-white/10 backdrop-blur-lg border border-white/40 p-10 md:p-14  rounded-[80px] overflow-hidden">
+            <div className="relative w-full md:h-[500px] flex flex-col md:flex-row items-center md:gap-20 text-white  bg-white/10 backdrop-blur-lg border border-white/40 p-10 md:p-14  rounded-[80px] overflow-hidden">
 
               {/* IMAGE LEFT SIDE (Overflow look) */}
               <img
@@ -37,10 +37,10 @@ const Best02 = () => {
               />
 
               {/* RIGHT SIDE CONTENT */}
-              <div className="flex flex-col gap-6 max-w-2xl">
-                <h1 className="text-3xl md:text-6xl font-semibold">{plant.name}</h1>
-                <p className="text-gray-300 text-lg md:text-3xl">{plant.short}</p>
-                <p className="text-gray-300 md:text-3xl leading-relaxed">{plant.description}</p>
+              <div className="flex flex-col gap-4 max-w-3xl">
+                <h1 className="text-3xl md:text-5xl font-semibold">{plant.name}</h1>
+                <p className="text-gray-300 text-lg md:text-2xl">{plant.short}</p>
+                <p className="text-gray-300 md:text-2xl leading-relaxed">{plant.description}</p>
 
                 {/* Button + Arrows + Number (same line) */}
                 <div className="flex items-center justify-between mt-6 gap-4">

@@ -5,7 +5,7 @@ import PlantCard from '../components/PlantCard'
 const TopSelling = () => {
   return (
     <div className=" mt-4">
-      <div className="flex flex-wrap justify-center gap-4">
+      <div className="flex flex-wrap justify-center gap-2">
         {plants.map((item) => (
           <PlantCard
             key={item.id}
